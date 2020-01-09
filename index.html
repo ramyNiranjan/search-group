@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>FEND '19 Group Shuffle!</title>
   </head>
   <body>
-    test
+    <header>
+      <h1 class="headline">FEND Group Shuffle!</h1>
+    </header>
+    <main>
+      <section class="shuffle-setup">
+        <form action="#" class="shuffle-setup__form">
+          <label for="antal" class="shuffle-setup__label">Antal</label>
+          <input
+            type="number"
+            name="antal"
+            id="antal"
+            min="2"
+            max="60"
+            class="shuffle-setup__selector"
+            label="Hur många?"
+          />
+          <input type="submit" value="submit" class="shuffle-setup__button" />
+        </form>
+      </section>
+    </main>
   </body>
 </html>
