@@ -1,0 +1,52 @@
+.shuffle-setup {
+  //   max-height: 250px;
+  //   max-width: 250px;
+  //   background: #84d0fe;
+  //   margin: 50px auto;
+
+  display: grid;
+  grid-template-rows: minmax(250px, auto);
+  padding: 40px;
+  background: #84d0fe;
+  &__form {
+    & label {
+      font-size: 20px;
+    }
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+
+    & input[type="number"] {
+      background: transparent;
+      border-style: none;
+      outline-style: none;
+      border-bottom: 1px solid #4444;
+    }
+    & input[type="submit"] {
+      color: #1d9af2;
+      background-color: #292d3e;
+      border: 1px solid #1d9af2;
+      border-radius: 4px;
+      padding: 15px 18px 30px 15px;
+      cursor: pointer;
+      height: 32px;
+      font-size: 14px;
+      box-shadow: 0 0 4px #999;
+      background-position: center;
+      transition: background 0.8s;
+      outline-style: none;
+      &:hover {
+        background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+          center/15000%;
+        color: white;
+      }
+      &:active {
+        background-color: #292d3e;
+        background-size: 100%;
+        transition: background 0s;
+      }
+    }
+  }
+}

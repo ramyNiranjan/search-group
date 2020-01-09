@@ -1,0 +1,30 @@
+.header {
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.644);
+    min-width: 90%;
+    min-height: 250px;
+    padding: 3em;
+    margin: 10px;
+    @media (min-width: 550px) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__headline {
+    color: white;
+    font-size: 3rem;
+    @media (min-width: 550px) {
+      margin-top: 100px;
+    }
+  }
+}

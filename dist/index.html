@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>FEND '19 Group Shuffle!</title>
   </head>
   <body>
-    <header>
-      <h1 class="headline">FEND Group Shuffle</h1>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__headline">FEND Group Shuffle</h1>
+      </div>
     </header>
     <main>
       <section class="shuffle-setup">
         <form action="#" class="shuffle-setup__form">
-          <label for="antal" class="shuffle-setup__label">Antal</label>
+          <label for="antal" class="shuffle-setup__label"
+            >How Many Groups You Want?
+          </label>
           <input
             type="number"
             name="antal"
@@ -21,9 +26,13 @@
             min="2"
             max="60"
             class="shuffle-setup__selector"
-            label="Hur många?"
+            placeholder="Enter nummer of group"
           />
-          <input type="submit" value="submit" class="shuffle-setup__button" />
+          <input
+            type="submit"
+            value="Get Groups"
+            class="shuffle-setup__button"
+          />
         </form>
       </section>
       <section class="shuffle-results"></section>
