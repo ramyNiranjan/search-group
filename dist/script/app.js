@@ -16,7 +16,6 @@ const restNumbers = (grps, newArr, oldArr, groupNumbers) => {
   let randNum = Math.floor(Math.random() * grps);
 
   if (newArr[randNum].length > groupNumbers) {
-    console.log("recurse motherfucker");
     restNumbers(grps, newArr, oldArr, groupNumbers);
   } else {
     newArr[randNum].push(oldArr[0]);
@@ -43,8 +42,49 @@ const chunkArray = (arr, numOfGrp) => {
 
     return x;
   } else {
-    return "too much";
+    return '';
   }
 };
 
-console.log(chunkArray(randArr, 5));
+
+let form = document.querySelector('.shuffle-setup__form')
+let body=document.querySelector('body')
+
+form.addEventListener('submit',(e)=>{
+  
+ 
+ e.preventDefault();
+  if (document.querySelector('.card')) {
+    document.querySelectorAll('.card').forEach(elm=>{
+      elm.remove()
+    })
+  }
+   let userInput = parseInt(form.antal.value)
+  let groups=chunkArray(randArr, userInput)
+
+ if(groups===''){
+   let error= document.createElement('p')
+   error.classList = 'error'
+   error.textContent = 'Input Is Greater Than List'
+   body.appendChild(error)
+   
+ }else{
+    groups.forEach(items => {
+     let card = document.createElement('div')
+     card.classList = 'card'
+     items.forEach(item => {
+       let p = document.createElement('p')
+       p.textContent = item
+       card.appendChild(p)
+       body.appendChild(card)
+     })
+   })
+ }
+
+  document.getElementById("test").scrollIntoView();
+  randArr = createRandmArr(arr)
+
+  
+})
+
+

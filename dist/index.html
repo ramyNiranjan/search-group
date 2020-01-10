@@ -12,9 +12,7 @@
       <div class="header__content">
         <h1 class="header__headline">FEND Group Shuffle</h1>
       </div>
-    </header>
-    <main>
-      <section class="shuffle-setup">
+      <section id="test" class="shuffle-setup">
         <form action="#" class="shuffle-setup__form">
           <label for="antal" class="shuffle-setup__label"
             >How Many Groups You Want?
@@ -23,10 +21,8 @@
             type="number"
             name="antal"
             id="antal"
-            min="2"
-            max="60"
             class="shuffle-setup__selector"
-            placeholder="Enter nummer of group"
+            placeholder="Enter nummer here"
           />
           <input
             type="submit"
@@ -35,7 +31,11 @@
           />
         </form>
       </section>
+    </header>
+    <main>
       <section class="shuffle-results"></section>
     </main>
+    <script src="./script/app.js"></script>
+    <script src="./script/group.js"></script>
   </body>
 </html>
