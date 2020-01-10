@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>FEND '19 Group Shuffle!</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <h1 class="header__headline">FEND Group Shuffle</h1>
-      </div>
-      <section id="test" class="shuffle-setup">
-        <form action="#" class="shuffle-setup__form">
-          <label for="antal" class="shuffle-setup__label"
-            >How Many Groups You Want?
-          </label>
-          <input
-            type="number"
-            name="antal"
-            id="antal"
-            class="shuffle-setup__selector"
-            placeholder="Enter nummer here"
-          />
-          <input
-            type="submit"
-            value="Get Groups"
-            class="shuffle-setup__button"
-          />
-        </form>
-      </section>
-    </header>
-    <main>
-      <section class="shuffle-results"></section>
-    </main>
-    <script src="./script/app.js"></script>
-    <script src="./script/group.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>FEND '19 Group Shuffle!</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__content">
+      <h1 class="header__headline">FEND Group Shuffle</h1>
+    </div>
+    <section id="test" class="shuffle-setup">
+      <form action="#" class="shuffle-setup__form">
+        <label for="antal" class="shuffle-setup__label">How Many Groups You Want?
+        </label>
+        <input type="number" name="antal" id="antal" class="shuffle-setup__selector" placeholder="Enter nummer here" />
+        <input type="submit" value="Get Groups" class="shuffle-setup__button" />
+      </form>
+    </section>
+  </header>
+  <main>
+    <section class="shuffle-results"></section>
+  </main>
+  <script src="./script/names.js"></script>
+  <script src="./script/app.js"></script>
+  <script src="./script/group.js"></script>
+</body>
+
 </html>

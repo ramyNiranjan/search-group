@@ -1,11 +1,15 @@
-const arr = ['karl','ramy','patric','chris','elin','sam','john','shan','fanny','jude'];
-const createRandmArr = arr => {
+// const arr = ['karl', 'ramy', 'patric', 'chris', 'elin', 'sam', 'john', 'shan', 'fanny', 'jude'];
+
+
+const createRandmArr = names => {
   let newArr = [];
 
-  while (newArr.length < arr.length) {
-    let ran = Math.floor(Math.random() * arr.length);
-    if (!newArr.includes(arr[ran])) {
-      newArr.push(arr[ran]);
+
+
+  while (newArr.length < names.length) {
+    let ran = Math.floor(Math.random() * names.length);
+    if (!newArr.includes(names[ran])) {
+      newArr.push(names[ran]);
     }
   }
 
@@ -23,7 +27,7 @@ const restNumbers = (grps, newArr, oldArr, groupNumbers) => {
   }
 };
 
-let randArr = createRandmArr(arr);
+let randArr = createRandmArr(names);
 
 const chunkArray = (arr, numOfGrp) => {
   let x = [];
@@ -48,46 +52,44 @@ const chunkArray = (arr, numOfGrp) => {
 
 
 let form = document.querySelector('.shuffle-setup__form')
-let body=document.querySelector('body')
+let body = document.querySelector('body')
 
-form.addEventListener('submit',(e)=>{
-  
- 
- e.preventDefault();
+form.addEventListener('submit', (e) => {
+
+
+  e.preventDefault();
   if (document.querySelector('.card')) {
-    document.querySelectorAll('.card').forEach(elm=>{
+    document.querySelectorAll('.card').forEach(elm => {
       elm.remove()
     })
-    
-  } else if (document.querySelector('.error')){
+
+  } else if (document.querySelector('.error')) {
     document.querySelector('.error').remove()
   }
-   let userInput = parseInt(form.antal.value)
-  let groups=chunkArray(randArr, userInput)
+  let userInput = parseInt(form.antal.value)
+  let groups = chunkArray(randArr, userInput)
 
- if(groups===''){
-   let error= document.createElement('p')
-   error.classList = 'error'
-   error.textContent = 'Input Is Greater Than List'
-   body.appendChild(error)
-   
- }else{
+  if (groups === '') {
+    let error = document.createElement('p')
+    error.classList = 'error'
+    error.textContent = 'Input Is Greater Than List'
+    body.appendChild(error)
+
+  } else {
     groups.forEach(items => {
-     let card = document.createElement('div')
-     card.classList = 'card'
-     items.forEach(item => {
-       let p = document.createElement('p')
-       p.textContent = item
-       card.appendChild(p)
-       body.appendChild(card)
-     })
-   })
- }
+      let card = document.createElement('div')
+      card.classList = 'card'
+      items.forEach(item => {
+        let p = document.createElement('p')
+        p.textContent = item
+        card.appendChild(p)
+        body.appendChild(card)
+      })
+    })
+  }
 
   document.getElementById("test").scrollIntoView();
-  randArr = createRandmArr(arr)
+  randArr = createRandmArr(names)
 
-  
+
 })
-
-
