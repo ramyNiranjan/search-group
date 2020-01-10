@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const arr = ['karl','ramy','patric','chris','elin','sam','john','shan','fanny','jude'];
 const createRandmArr = arr => {
   let newArr = [];
 
@@ -58,6 +58,9 @@ form.addEventListener('submit',(e)=>{
     document.querySelectorAll('.card').forEach(elm=>{
       elm.remove()
     })
+    
+  } else if (document.querySelector('.error')){
+    document.querySelector('.error').remove()
   }
    let userInput = parseInt(form.antal.value)
   let groups=chunkArray(randArr, userInput)
