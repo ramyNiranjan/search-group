@@ -1,0 +1,29 @@
+.footer {
+  min-height: 100px;
+  width: 100%;
+  background-image: url(../images/footer.png);
+  background-size: contain;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.644);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__headline {
+    z-index: 1;
+    color: white;
+  }
+
+  &__text {
+    z-index: 1;
+    color: white;
+  }
+}
