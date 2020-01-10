@@ -8,11 +8,10 @@
   align-items: center;
   flex-flow: column wrap;
   position: relative;
-  margin-top: 3em;
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     background-color: rgba(0, 0, 0, 0.644);
     height: 100%;
     width: 100%;

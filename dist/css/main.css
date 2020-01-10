@@ -43,14 +43,46 @@ body {
 }
 
 .card {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  background: #64c2fcc0;
-  margin: 10px;
-  padding: 1em;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  display: block;
+  min-height: 200px;
+  background: -webkit-gradient(linear, right top, left bottom, from(#2b76a5d3), to(#4284ad60));
+  background: linear-gradient(to left bottom, #2b76a5d3, #4284ad60);
+  margin: 4px;
+  padding: 1.5em;
+  color: white;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-shadow: 1px 1px 2px gray;
+  font-size: 15px;
+  border-left: 3px solid #43a2dd;
+}
+
+.card p {
+  margin-bottom: 4px;
+}
+
+.card p::before {
+  content: "- ";
+}
+
+.shuffle-results {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  background-image: url(https://cdn.pixabay.com/photo/2019/12/30/20/35/snow-4730565_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .shuffle-results {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .header {
@@ -185,12 +217,11 @@ body {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   position: relative;
-  margin-top: 3em;
 }
 
 .footer::after {
   position: absolute;
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, 0.644);
   height: 100%;
   width: 100%;

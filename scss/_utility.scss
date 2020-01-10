@@ -6,11 +6,35 @@
 }
 
 .card {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  background: #64c2fcc0;
-  margin: 10px;
-  padding: 1em;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  display: block;
+  min-height: 200px;
+  background: linear-gradient(to left bottom, #2b76a5d3, #4284ad60);
+  margin: 4px;
+  padding: 1.5em;
+  color: white;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-shadow: 1px 1px 2px gray;
+  font-size: 15px;
+  border-left: 3px solid #43a2dd;
+
+  p {
+    margin-bottom: 4px;
+  }
+  p::before {
+    content: "- ";
+  }
+}
+
+.shuffle-results {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  background-image: url(https://cdn.pixabay.com/photo/2019/12/30/20/35/snow-4730565_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
