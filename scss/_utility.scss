@@ -6,11 +6,24 @@
 }
 
 .card {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  background: #64c2fcc0;
+  display: block;
+  min-height: 200px;
+  background: #64c3fc;
   margin: 10px;
-  padding: 1em;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 1.5em;
+  font-size: 15px;
+  border-left: 3px solid #43a2dd;
+
+  p {
+    margin-bottom: 4px;
+  }
+  p::before {
+    content: "- ";
+  }
+}
+
+.shuffle-results {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
 }
