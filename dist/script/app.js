@@ -69,6 +69,19 @@ form.addEventListener('submit', (e) => {
   let userInput = parseInt(form.antal.value)
   let groups = chunkArray(randArr, userInput)
 
+  let footer = document.querySelector('.footer');
+  let fHeadline = document.createElement('h2');
+  let fText = document.createElement('p');
+  footer.style.display = 'flex'
+  fHeadline.className = 'footer__headline'
+  fText.className = 'footer__text'
+  fHeadline.textContent = 'FEND Group Shuffle'
+  fText.textContent = 'Ramy, Samy & Paty Productions :)'
+  footer.appendChild(fHeadline)
+  footer.appendChild(fText)
+
+
+
   if (groups === '') {
     let error = document.createElement('p')
     error.classList = 'error'
@@ -85,6 +98,7 @@ form.addEventListener('submit', (e) => {
         card.appendChild(p)
         results.appendChild(card)
       })
+
     })
   }
 
