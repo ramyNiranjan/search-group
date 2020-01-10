@@ -52,7 +52,7 @@ const chunkArray = (arr, numOfGrp) => {
 
 
 let form = document.querySelector('.shuffle-setup__form')
-let body = document.querySelector('body')
+let results = document.querySelector('.shuffle-results')
 
 form.addEventListener('submit', (e) => {
 
@@ -73,7 +73,7 @@ form.addEventListener('submit', (e) => {
     let error = document.createElement('p')
     error.classList = 'error'
     error.textContent = 'Input Is Greater Than List'
-    body.appendChild(error)
+    results.appendChild(error)
 
   } else {
     groups.forEach(items => {
@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
         let p = document.createElement('p')
         p.textContent = item
         card.appendChild(p)
-        body.appendChild(card)
+        results.appendChild(card)
       })
     })
   }
